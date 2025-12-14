@@ -1,0 +1,49 @@
+# Application Logs (LOGS.txt)
+
+## Backend Startup Logs
+
+Server running on port 5000
+MongoDB connected successfully
+JWT middleware initialized
+
+---
+
+## Database Connection Logs
+
+Connecting to MongoDB Atlas...
+MongoDB connection established
+Database: task-manager
+Cluster: Atlas Cluster0
+
+---
+
+## Authentication API Logs
+
+POST /api/auth/register 201 Created
+POST /api/auth/login 200 OK
+GET /api/users/me 200 OK
+
+---
+
+## Tasks API Logs
+
+GET /api/tasks 200 OK
+POST /api/tasks 201 Created
+PUT /api/tasks/65f1a2c9e3a123456789abcd 200 OK
+DELETE /api/tasks/65f1a2c9e3a123456789abcd 200 OK
+
+---
+
+## Error Handling Logs
+
+POST /api/tasks 400 Bad Request (Title is required)
+GET /api/tasks/invalid-id 400 Invalid task ID
+GET /api/tasks/65f1a2c9e3a123456789ffff 404 Task not found
+
+---
+
+## Notes
+
+* Logs captured during local development
+* Authentication token attached via Axios interceptor
+* Protected routes validated successfully
