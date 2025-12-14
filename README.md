@@ -1,206 +1,70 @@
-# Task Manager – MERN Stack Application
+# Getting Started with Create React App
 
-## 📌 Project Overview
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This is a **full-stack Task Manager application** built using the **MERN stack** (MongoDB, Express.js, React.js, Node.js).
+## Available Scripts
 
-The application allows users to:
+In the project directory, you can run:
 
-* Register and log in securely using JWT authentication
-* Create, update, delete, and manage tasks
-* Mark tasks as completed or pending
-* Search and filter tasks
-* View and update user profile information
+### `npm start`
 
-This project was built as part of a **Frontend Developer Assignment** and follows industry-grade best practices for authentication, API security, and clean UI design.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
----
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-## 🛠 Tech Stack
+### `npm test`
 
-### Frontend
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-* React.js
-* Axios
-* React Router
-* CSS (Responsive Design)
+### `npm run build`
 
-### Backend
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-* Node.js
-* Express.js
-* MongoDB Atlas
-* Mongoose
-* JWT Authentication
-* bcrypt.js
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
----
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## ⚙️ Setup Instructions
+### `npm run eject`
 
-### 1️⃣ Clone the Repository
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-```bash
-git clone <your-github-repo-url>
-cd task-manager
-```
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
----
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-### 2️⃣ Backend Setup
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-```bash
-cd backend
-npm install
-```
+## Learn More
 
-Create a `.env` file inside `backend`:
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-```
-PORT=5000
-MONGO_URI=your_mongodb_atlas_connection_string
-JWT_SECRET=your_secret_key
-```
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-Start backend server:
+### Code Splitting
 
-```bash
-node server.js
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-Backend will run at:
+### Analyzing the Bundle Size
 
-```
-http://localhost:5000
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
----
+### Making a Progressive Web App
 
-### 3️⃣ Frontend Setup
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-```bash
-cd frontend
-npm install
-npm start
-```
+### Advanced Configuration
 
-Frontend will run at:
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-```
-http://localhost:3000
-```
+### Deployment
 
----
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-## 🔐 Authentication Flow
+### `npm run build` fails to minify
 
-* User registers or logs in
-* Backend returns a JWT token
-* Token is stored in `localStorage`
-* Axios interceptor automatically attaches token to protected API calls
-* Unauthorized users are redirected to login
-
----
-
-## 📡 API Endpoints
-
-### Auth Routes
-
-| Method | Endpoint         | Description       |
-| ------ | ---------------- | ----------------- |
-| POST   | /api/auth/signup | Register new user |
-| POST   | /api/auth/login  | Login user        |
-
-### User Routes
-
-| Method | Endpoint      | Description      |
-| ------ | ------------- | ---------------- |
-| GET    | /api/users/me | Get user profile |
-| PUT    | /api/users/me | Update profile   |
-
-### Task Routes
-
-| Method | Endpoint       | Description     |
-| ------ | -------------- | --------------- |
-| GET    | /api/tasks     | Get all tasks   |
-| POST   | /api/tasks     | Create new task |
-| PUT    | /api/tasks/:id | Update task     |
-| DELETE | /api/tasks/:id | Delete task     |
-
-> All task and profile routes are **JWT protected**.
-
----
-
-## 🧪 Testing
-
-* API tested using **Postman**
-* Postman collection included in repository
-* Includes:
-
-  * Signup
-  * Login
-  * Profile
-  * Task CRUD
-
----
-
-## 📄 Logs
-
-A `LOGS.txt` file is included with:
-
-```
-Server running on port 5000
-MongoDB connected successfully
-POST /api/auth/login 200 OK
-GET /api/tasks 200 OK
-```
-
----
-
-## 🚀 Deployment (Optional Bonus)
-
-### Backend
-
-* Deployed using Render :
-https://task-manager-backend-ca8f.onrender.com
-
-### Frontend
-
-* Deployed using Vercel :
-
-https://task-manager-frontendd-e0cbt4d6r-geethas-projects-4c31d4ab.vercel.app/
-https://task-manager-frontendd.vercel.app/
-
----
-
-## 📈 Scalability Notes
-
-* Can add task pagination
-* Role-based access (Admin/User)
-* Refresh tokens for auth
-* Task reminders & notifications
-* Dockerization for deployment
-
----
-
-## 👩‍💻 Author
-
-**Geethanjali Banda**
-
----
-
-## ✅ Final Checklist
-
-* Signup & Login working
-* JWT authentication implemented
-* Protected routes secured
-* Task CRUD functional
-* Search & filter implemented
-* Profile update works
-* Postman collection included
-* Logs included
-* Clean & structured codebase
-
----
-
-✨ This project meets all requirements of the assignment and is ready for evaluation.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
